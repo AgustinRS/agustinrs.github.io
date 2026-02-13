@@ -1,7 +1,7 @@
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 80px;
+  right: 50px;
   background-color: #25D366;
   width: 60px;
   height: 60px;
@@ -15,13 +15,15 @@
 }
 
 .whatsapp-float img {
-  width: 35px;
-  height: 35px;
+  width: 120px;
+  height: 120px;
 }
 
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+
+
 
 .carousel-caption h2 {
   font-size: 3rem;   /* tamaño subtítulo */
@@ -47,4 +49,38 @@
 .carousel-caption h1,
 .carousel-caption h2 {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+#contactos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.seccion-fondo {
+  margin-top: 50px;
+  position: relative;
+  background-image: url("../assets/imagenes/fondobillete.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  color: white;
+}
+
+/* Capa oscura */
+.seccion-fondo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Todo el contenido debe estar encima */
+.seccion-fondo > * {
+  position: relative;
+  z-index: 2;
 }
